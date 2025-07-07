@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sony TV Complaint Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      background-color: #EC1A3B;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      padding: 12px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #c9132f;
+    }
+
+    h2 {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+    <h2>Sony TV Complaint Submission</h2>
+
+    <!-- Required: Your Org ID -->
+    <input type="hidden" name="orgid" value="00DgK000006I4WP" />
+
+    <!-- Redirect after submit -->
+    <!-- <input type="hidden" name="retURL" value="https://www.sonytv.com/thank-you" /> -->
+    <input type="hidden" name="retURL" value="https://www.salesforce.com/thankyou" />
+    <!-- <input type="hidden" name="retURL" value="thank-you.html" /> -->
+
+
+    <!-- Standard fields -->
+    <label for="name">Name</label>
+    <input type="text" name="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required />
+
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" />
+
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" required />
+
+    <label for="description">Description of the Issue</label>
+    <textarea name="description" rows="5" required></textarea>
+
+    <!-- Custom field: Complaint Category (replace 00N... with actual field ID if needed) -->
+    <label for="Complaint Category">Complaint Category</label>
+    <select name="00N5g00000abcdEFG"> <!-- replace with actual field ID from Salesforce -->
+      <option value="Display">Display</option>
+      <option value="Sound">Sound</option>
+      <option value="Remote">Remote</option>
+      <option value="Power">Power</option>
+      <option value="Ports">Ports</option>
+    </select>
+
+    <input type="submit" value="Submit Complaint" />
+  </form>
+
+</body>
+
+</html>
